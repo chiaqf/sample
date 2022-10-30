@@ -27,7 +27,7 @@ socket.on('request', function(request) {
     const start = async function() {
       //const result = await client.xrevrange('kathleen');
       //const result = await client.xrevrange('random100', '+', '-', 'COUNT', 1);
-      const result = await client.sendCommand(['XREVRANGE', 'random100', '+', '-', 'COUNT', '1']); // 'OK' 
+      const result = await client.sendCommand(['XREVRANGE', 'random', '+', '-', 'COUNT', '1']); // 'OK' 
       const [temp] = result;
       const [id,data] = temp;
       const [ts,ts_val,random,random_val] = data;
